@@ -38,7 +38,7 @@ CLOSESPIDER_TIMEOUT = 82800
 # mysql
 MYSQL_HOST = '127.0.0.1'
 MYSQL_PORT = 3306
-MYSQL_DB = 'dianjinghu'
+MYSQL_DB = 'xxxxxxxxx'
 MYSQL_USER = 'root'
 MYSQL_PASSWD = 'root'
 CHARSET = 'utf8'
