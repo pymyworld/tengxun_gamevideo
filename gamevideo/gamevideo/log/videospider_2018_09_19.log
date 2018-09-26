@@ -1,0 +1,4 @@
+2018-09-19 16:29:49 [root] ERROR: 图片下载中服务器断开连接,将再次请求 url:http://puui.qpic.cn/qqvideo_ori/0/w0768mj372a_496_280/0 error:('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-09-19 16:34:25 [root] ERROR: 图片下载中服务器断开连接,将再次请求 url:http://puui.qpic.cn/qqvideo_ori/0/f0770czskob_496_280/0 error:('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-09-19 16:41:53 [root] ERROR: 图片下载中服务器断开连接,将再次请求 url:http://puui.qpic.cn/qqvideo_ori/0/f0764ukcaho_496_280/0 error:('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-09-19 16:49:15 [root] ERROR: -*spider:tengxun  cost_time:1470s*-

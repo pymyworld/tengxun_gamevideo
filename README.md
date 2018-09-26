@@ -1,29 +1,15 @@
-# xingji100_danmu
-主播数据平台弹幕实时收集，包括斗鱼、企鹅、熊猫、b站、全民、虎牙、龙珠、战旗
+# tengxun_gamevideo
+微信小程序游戏视频君数据来源，腾讯游戏视频及相关数据抓取
 
-斗鱼、虎牙、龙珠、熊猫为node.js开发
-* danmu_config.js为node.js弹幕收集脚本配置文件
-* 斗鱼: 在 https://github.com/BacooTang/douyu-danmu 基础上进一步开发
-* 虎牙: 在 https://github.com/BacooTang/huya-danmu 基础上进一步开发
-* 龙珠: 在 https://github.com/BacooTang/longzhu-danmu 基础上进一步开发
-* 熊猫: 在 https://github.com/BacooTang/panda-danmu 基础上进一步开发
-* 在dbhelper.js对mysql的交互代码进行封装
-需要安装的三方包有：
-* douyu-danmu
-* huya-danmu
-* longzhu-danmu
-* panda-danmu
-* mongodb
-* mysql
-* log4js
-* string-format
+使用scrapy框架，主要抓取腾讯游戏视频及相关信息
 
-企鹅、b站、全民、战旗为python开发
-* danmu_config.py为python弹幕收集脚本配置文件
-* 全民、战旗: 在 https://github.com/littlecodersh/danmu 基础上进一步开发
-* b站: 在 https://github.com/lyyyuna/bilibili_danmu 基础上进一步开发
 
-弹幕收集结果全部存入mongodb中
-存储格式为
-{"anchor_id": 来源于xingji数据库, "platform_id": 来源于xingji数据库, "live_url": 来源于xingji数据库, "type": danmu or gift, "content": 礼物名或弹幕消息, "gift_num": 礼物数量}
+* tengxun:主要抓取视频真实源地址和相关视频信息，存入dj_wx_video表中，抓取逻辑有两种:
+1. 运营提供指定发布者的专题链接
+2. 提供腾讯视频搜索引擎关键字，抓取搜索结果
+所以tengxun为两种逻辑制定了两种抓取策略
+* tx_update:主要更新视频真实源地址中的vkey参数，更新数据库中的视频链接
 
+
+* video_config.py:在这里添加指定发布者专题链接，添加搜索关键字，由于视频分类是根据视频title判断的，所以可以在这里设置关键字来判断视频分类
+* vkey_control.py:用来监控vkey的变化周期，vkey参数在每天的4点，10点，16点，22点左右会发生变化
